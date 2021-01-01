@@ -1,0 +1,22 @@
+p#countdown {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 120pt;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    cursor: default;
+}
+
+p#time {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+p {
+    color: white;
+}
+
+body {
+    background-color: black
+}
