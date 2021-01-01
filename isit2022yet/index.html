@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Is it 2022 yet?</title>
+</head>
+
+<body>
+    <center>
+    <p id="countdown"></p>
+    <p id="time">   </p>
+    </center>
+    <script>
+        var countDownDate = new Date("Jan 1, 2022 00:00:00").getTime() / 1000;
+        var x = setInterval(function () {
+            var now = new Date().getTime() / 1000;
+            var distance = countDownDate - now;
+            var distr = Math.trunc(distance);
+            if (distance <= 11 && distance > 0)
+            {
+                document.getElementById("countdown").innerHTML = Math.trunc(distance);
+                document.getElementById("time").innerHTML = "                              ";
+            }
+            else if (distance <= 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "YES";
+                if (document.getElementById("time").innerHTML == "                              ")
+                {
+                    document.getElementById("time").innerHTML = "Happy new year of 2022! Let this be your best year!";
+                    setTimeout(function(){ 
+                        window.location.replace("https://youtu.be/CWYKpwlVGso?t=62");
+                    }, 5000);
+                }
+                else {
+                    document.getElementById("time").innerHTML = "Happy new year of 2022! Let this be your best year!";
+                }
+            }
+            else {
+                document.getElementById("countdown").innerHTML = "NO";
+                document.getElementById("time").innerHTML = "Seconds left until January 1, 2022: " + distr;
+            }
+        }, 1000);
+    </script>
+    <link rel="stylesheet" href="stylesheet.css">
+</body>
+
+</html>
